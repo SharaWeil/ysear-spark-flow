@@ -1,0 +1,1 @@
+com.ysear.spark.spi.sink.FlowSinkFactory=com.ysear.plugin.console.sink.ConsoleSinkFactory

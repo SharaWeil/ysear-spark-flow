@@ -1,0 +1,2 @@
+com.ysear.spark.spi.source.FlowSourceFactory=com.ysear.plugin.mysql.flowsource.MySqlFLowSourceFactory
+com.ysear.spark.spi.datasource.FlowDataSourceFactory=com.ysear.plugin.mysql.datasource.MySqlDataSourceFactory
