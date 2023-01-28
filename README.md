@@ -78,3 +78,20 @@
  - 实现flowSource请实现FlowDataSourceFactory特质
  - 实现flowSink请实现FlowSourceFactory特质
  - 在META-INF文件下创建ysear.factories文件指定spi文件
+
+
+
+
+### 启动命令
+    spark-default.xml文件添加配置
+    spark.yarn.jars    hdfs:///spark/jars/*.jar
+    
+    ./bin/spark-submit --class com.ysera.elt.flow.YseraSparkApplication \
+    --master yarn \
+    --driver-memory 4g \
+    --executor-memory 2g \
+    --executor-cores 1 \
+    --jars $(echo /opt/software/spark/ysera/jar/*.jar | tr ' ' ',') \
+    /opt/software/spark/ysera/jars/ysera_core-1.0-SNAPSHOT.jar \
+    10 \
+    -f /opt/software/spark/ysera/mysql_hbase.xml
